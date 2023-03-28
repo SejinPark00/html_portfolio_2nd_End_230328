@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+/* min 1000px */
+@media (min-width:1000px){
+        /* container */
+        #container {margin: 0 auto; display: flex; justify-content: space-evenly;}
+
+        /* left container */
+        #leftctr {width: 50%; height: auto; margin-top: 50px; margin-bottom: 100px; background-color:#000;}
+
+        /* left ctr content */
+        #leftctr > .content {width: 100%; height: auto; margin-top: 70px;}
+        #leftctr > .content:first-child {margin-top: 0;}
+        #leftctr > .content > h1 {font-size: 30px; font-weight: bold; color: #fff; }
+        #leftctr > .content > p {font-size: 12px; margin-top: 15px; color: #dcdcdc;}
+        #leftctr > .content > p > span:nth-child(2) {color:palevioletred;}
+        #leftctr > .content > .dot {font-size: 12px; margin-top: 15px; color:palevioletred;}
+
+            /* content imgbox */
+        #leftctr > .content > .imgbox {width:100%; height: 500px; overflow: hidden; margin-top: 15px; background-color: #fff;}
+        #leftctr > .content > .imgbox > img {width: 100%; height: 100%;}
+        #leftctr > .content > .imgbox > img:hover{cursor: pointer; opacity: 0.8;}
+
+            /* content video */
+        #leftctr > .content > .vimgbox {width:100%; height: 500px; overflow: hidden; margin-top: 15px; position: relative;}
+        #leftctr > .content > .vimgbox > img {width: 100%; height: 100%;}
+
+        #leftctr > .content > .vimgbox > .videolink {width:100%; height:500px; 
+            display:flex; justify-content:center; align-items:center;  
+            position:absolute; top:0; left:0; opacity:0; transition:0.5s; cursor:pointer;}
+        #leftctr > .content > .vimgbox > .videolink > i {color:#fff; font-size:65px; color:greenyellow;}
+        #leftctr > .content > .vimgbox > .videolink:hover {opacity:1;}    
+        #leftctr > .content > video {width:100%; height:500px; margin-top:20px; display:none;}    
+
+            /* content textbox */
+        #leftctr > .content > .textbox {width: 100%;}
+        #leftctr > .content > .textbox > .tag {display: flex; align-items: center;}
+        #leftctr > .content > .textbox > .tag > span {color: #fff; font-size: 14px; font-weight: bold; margin-right: 10px;}
+
+        #leftctr > .content > .textbox > .tag > ul {display: flex;}
+        #leftctr > .content > .textbox > .tag > ul > li {margin-right: 5px; display: flex;}
+        #leftctr > .content > .textbox > .tag > ul > li > a {text-decoration: none; color: #fff; font-size: 12px;
+            background-color: blueviolet; padding: 10px; margin-top: 5px; border-radius: 3px; font-weight: bold;}
+        #leftctr > .content > .textbox > .tag > ul > li > a:hover {color:blueviolet;background-color: #fff;}
+
+        #leftctr > .content > .textbox > p {font-size: 13px; color: #fff; margin: 10px 0; line-height: 20px;}
+
+            /* content btnbox */
+        #leftctr > .content > .textbox > .btnbox {display: flex; justify-content: space-between; align-items: center;}
+        #leftctr > .content > .textbox > .btnbox > button {border-radius: 3px; padding: 10px; cursor: pointer;
+            border: 1px solid palevioletred; background-color: palevioletred; color: #fff;}
+        #leftctr > .content > .textbox > .btnbox > button:hover {border: 1px solid #fff; background-color: #fff;
+            color: palevioletred;}
+
+        #leftctr > .content > .textbox > .btnbox > .btniconbox {background-color: palevioletred; border-radius: 3px;
+            display: flex;}
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li {padding: 10px; color: #fff; 
+            display: flex; align-items: center;}
+
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li > p {font-size: 14px; margin-top: -3px;}
+
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li > .btnicon1 
+            {background-image: url(../img/btnicon1.png); background-size: cover; background-position: center;
+            width: 15px; height: 15px; display: flex; margin-right: 5px;}
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li > .btnicon1 > img {width: 100%; height: 100%;}
+
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li > .btnicon2
+            {background-image: url(../img/btnicon2.png); background-size: cover; background-position: center;
+            width: 15px; height: 15px; display: flex; margin-right: 5px;}
+        #leftctr > .content > .textbox > .btnbox > .btniconbox > li > .btnicon2 > img {width: 100%; height: 100%;}
+
+        /* right container */
+        #rightctr {width: 25%; height: auto; margin-top: 50px;}
+
+        /* right content - search */
+        #search {width: 100%; height: 50px; display: flex;}
+
+        #search > input {width: 85%; height: 100%; background-color: #666; color:#fff; border: none; outline: none;}
+        #search > input::placeholder {color: #dcdcdc; padding-left: 10px;}
+
+        #search > button {width:15%; height: 100%; background-color: #666; border: none; 
+            color: #fff; font-size: 17px;}
+        #search > button:hover {color:palevioletred; cursor: pointer;}
+
+        /* right content - about */
+        #about {width: 100%; height: auto; margin-top: 40px;
+            display: flex; flex-direction: column; }
+
+        #about > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+
+        #about > .abimg {width: 100%; height: 200px; overflow: hidden; margin-top: 10px;}
+        #about > .abimg > img {width: 100%; height: 100%;}
+
+        #about > .abtext {width: 100%; height: auto; margin-top: 10px;}
+        #about > .abtext > span {color: #fff; font-size: 15px; font-weight: bold; line-height: 25px;}
+        #about > .abtext > p {color: #fff; font-size: 12px; line-height: 16px;}
+
+        /* right content - follow */
+        #follow {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-direction: column; }
+
+        #follow > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+        #follow > .fwiconbox {width: 100%; height: auto; margin-top: 10px;
+            display: flex; }
+        #follow > .fwiconbox > .fwicon {width: 20%; height: auto; margin-right: 10px;}
+        #follow > .fwiconbox > .fwicon > img {width: 100%; height: 100%; overflow: hidden; transition: 0.5s;}
+        #follow > .fwiconbox > .fwicon > img:hover {border-radius: 30px; cursor: pointer;}
+
+        /* right content - categori */
+        #categori {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-direction: column;}
+
+        #categori > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+        
+        #categori > .catext {width: 100%; height: auto; margin-top: 10px;}
+        #categori > .catext > ul {width: 100%;}
+        #categori > .catext > ul > li {width: 100%; border-bottom: 1px solid #dcdcdc; margin-bottom: 10px;
+            display: flex; flex-direction: row; justify-content: space-between;}
+        #categori > .catext > ul > li > a {text-decoration: none; color: #fff; font-size: 17px; padding-bottom: 10px;}
+        #categori > .catext > ul > li > a:hover {color: palevioletred;}
+        #categori > .catext > ul > li > span {text-decoration: none; color: #fff; font-size: 15px;}
+
+        /* right content - DJ */
+        #dj {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-direction: column; justify-content: center;}
+
+        #dj > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+        #dj > span {color: palevioletred; font-size: 30px; text-align: center; margin: 5px;}
+        #dj > p {width: 100%; font-size: 12px; color: #fff; line-height: 20px; }
+
+        /* right content - artist */
+        #artistbox {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-direction: column; justify-content: center;}
+
+        #artistbox > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+
+        .artist {width: 100%; height: auto; margin-top: 10px;
+            display: flex; flex-direction: row; justify-content: center;}
+        .artist > .atimg {width: 30%; height: 120px; overflow: hidden; background-color: #fff;}
+        .artist > .atimg > a > img {width: 100%; height: 100%; }
+        .artist > .atimg > a > img:hover {opacity: 0.8;}
+
+        .attext {width: 75%; height: 80px; margin: 15px 0 0 10px; line-height: 25px; }
+        .attext > a {text-decoration: none;}
+        .attext > a > h2 {font-size: 17px; color: #fff;}
+        .attext > a > h2 > span {font-size: 15px; color: palevioletred; font-weight: bold;}
+        .attext > h3 {font-size: 15px; color: #fff;}
+        .attext > p {font-size: 12px; color: #fff;}
+
+        /* right content - Tag */
+        #tagbox {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-direction: column;}
+
+        #tagbox > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+
+        #tagbox > .tag {height: auto; margin: 20px 0;}
+        #tagbox > .tag > ul {display: flex; flex-flow: row wrap;}
+        #tagbox > .tag > ul > li {height:auto; margin-right: 5px; display: flex;}
+        #tagbox > .tag > ul > li a {text-decoration: none; color: #fff; font-size: 14px;
+            background-color: blueviolet; padding: 15px; margin-top: 5px; border-radius: 3px; font-weight: bold;}
+        #tagbox > .tag > ul > li a:hover {color:blueviolet;background-color: #fff;}
+
+        /* right content - email */
+        #email {width: 100%; height: auto; margin-top: 30px;
+            display: flex; flex-direction: column;}
+        #email > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+
+        #email > .emailbox {width: 100%; height: 50px; margin-top: 10px;
+            display: flex; flex-direction: row;}
+        #email > .emailbox > input {width: 85%; height: 100%; background-color: #666; color:#fff; border: none; outline: none;}
+        #email > .emailbox > input::placeholder {color: #dcdcdc; padding-left: 10px;}
+
+        #email > .emailbox> button {width:15%; height: 100%; background-color: #666; border: none; 
+            color: #fff; font-size: 17px;}
+        #email > .emailbox > button:hover {color:palevioletred; cursor: pointer;}
+
+        /* right content - instagram */
+        #insta {width: 100%; height: auto; margin-top: 50px;
+            display: flex; flex-flow: row wrap; justify-content: space-between;}
+
+        #insta > h1 {font-size: 20px; color: #fff; font-weight: bold;}
+
+
+        #insta > .instabox {width: 100%; height:auto; margin-top: 10px;
+            display: flex; flex-wrap: wrap; justify-content: space-between;}
+
+        #insta > .instabox > a {width: 48%; overflow: hidden; position: relative; margin: 2% 0;}
+
+        #insta > .instabox > a > .instaimg {width: 100%; height: 100px; }
+        #insta > .instabox > a > .instaimg > img {width: 100%; height:100%; transition: 0.5s;}
+        #insta > .instabox > a > .instaimg > img:hover {opacity: 0.5;}
+
+        #insta > .instabox > a > .instaicon {width: 100%; height: 100%; position: absolute; top: 0; 
+            color: #fff; opacity: 0; transition: 0.5s; font-size: 20px;
+            display: flex; justify-content: center; align-items: center; }
+        #insta > .instabox > a > .instaicon:hover {opacity: 1;}
+    }
